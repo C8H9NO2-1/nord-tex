@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{nord}[2025/02/18 Nord theme for LaTeX documents]
+\RequirePackage{xcolor}
+
+\newcommand{\nord}{
+  % Polar Night
+  \definecolor{nordDarkBlack}{HTML}{2E3440}     % nord0
+  \definecolor{nordBlack}{HTML}{3B4252}         % nord1
+  \definecolor{nordMediumBlack}{HTML}{434C5e}   % nord2
+  \definecolor{nordBrightBlack}{HTML}{4C566A}   % nord3
+  % Snow Storm
+  \definecolor{nordWhite}{HTML}{D8DEE9}         % nord4
+  \definecolor{nordBrighterWhite}{HTML}{E5E9F0} % nord5
+  \definecolor{nordBrightestWhite}{HTML}{ECEFF4}% nord6
+  % Frost
+  \definecolor{nordCyan}{HTML}{8FBCBB}          % nord7
+  \definecolor{nordBrightCyan}{HTML}{88C0D0}    % nord8
+  \definecolor{nordBlue}{HTML}{81A1C1}          % nord9
+  \definecolor{nordBrightBlue}{HTML}{5E81AC}    % nord10
+  % Aurora
+  \definecolor{nordRed}{HTML}{BF616A}           % nord11
+  \definecolor{nordOrange}{HTML}{D08770}        % nord12
+  \definecolor{nordYellow}{HTML}{EBCB8B}        % nord13
+  \definecolor{nordGreen}{HTML}{A3BE8C}         % nord14
+  \definecolor{nordMagenta}{HTML}{B48EAD}       % nord15
+}
+
+% Define nord flavor colors as the default
+\nord
+
+% Define nord option to prevent error
+% when 'nord' option is passed in
+\DeclareOption{nord}{}
+
+\ProcessOptions\relax
+
+\pagecolor{NordBlack}
+\color{nordWhite}
+
